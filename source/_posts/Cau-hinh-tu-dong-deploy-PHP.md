@@ -123,6 +123,14 @@ dep deploy production
 
 [https://gist.github.com/trungpv1601/eedde3ca6f04f2129945bbf1fec42929](https://gist.github.com/trungpv1601/eedde3ca6f04f2129945bbf1fec42929)
 
+## 7. Cấu hình Alias cho Apache và NGINX
+
+1. Apache
+[https://gist.github.com/trungpv1601/b7d70cba5c856bbcec06e180bba5ede0](https://gist.github.com/trungpv1601/b7d70cba5c856bbcec06e180bba5ede0)
+
+2. NGINX
+[https://gist.github.com/trungpv1601/553bc03722bd87b709667cc5efcfa82a](https://gist.github.com/trungpv1601/553bc03722bd87b709667cc5efcfa82a)
+
 ## Credit
 - [https://www.codepicky.com/php-automatic-deploy/](https://www.codepicky.com/php-automatic-deploy/)
 
