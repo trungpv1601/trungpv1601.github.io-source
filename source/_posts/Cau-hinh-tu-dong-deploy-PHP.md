@@ -17,7 +17,7 @@ sudo chfn -o umask=022 deployer
 sudo chown deployer:www-data /var/www/html
 sudo chmod g+s /var/www/html
 ```
-Sau đó login vào user deployer và tạo ssh key 
+Sau đó login vào user deployer và tạo ssh key
 
 ```
 su - deployer
@@ -70,6 +70,8 @@ dep init
 
 Sau khi tạo thì nó sẹ tạo ra file deploy.php trong project. Chúng ta sẽ cấu hình trong đó.
 
+> Thực ra từ bước này trở xuống cũng không cần quan tâm vì deployer.org có template cấu hình cho từng framework chỉ custom vài thứ là chạy ngon lành.
+
 ## 3. Cấu hình server cho deploy.php
 
 Ta có thể cấu hình nhiều môi trường deploy: production, staging hay dev...
@@ -105,16 +107,16 @@ task('deploy', [
 ]);
 ```
 
-## 5. Một số lệnh deploy
+## 5. Lệnh deploy
 
 - Chạy từng task trên tất cả các hosts
 ```
-dep compile-assets
+dep deploy
 ```
 
 - Chạy từng task trên một một host
 ```
-dep compile-assets production
+dep deploy production
 ```
 
 ## 6. Sample deploy.php
