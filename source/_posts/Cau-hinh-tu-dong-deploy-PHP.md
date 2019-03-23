@@ -117,6 +117,10 @@ dep compile-assets
 dep compile-assets production
 ```
 
+## 6. Sample deploy.php
+
+[https://gist.github.com/trungpv1601/eedde3ca6f04f2129945bbf1fec42929](https://gist.github.com/trungpv1601/eedde3ca6f04f2129945bbf1fec42929)
+
 ## Credit
 - [https://www.codepicky.com/php-automatic-deploy/](https://www.codepicky.com/php-automatic-deploy/)
 
