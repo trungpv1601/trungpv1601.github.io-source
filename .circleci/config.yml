@@ -28,4 +28,8 @@ jobs:
       - run: git config --global user.email "trungpv1601@gmail.com"
       - run: git config --global user.name "Circle CI"
 
+      - add_ssh_keys:
+          fingerprints:
+            - "$SSH_KEY_TRUNGPV1601_PAGE"
+
       - run: hexo deploy --generate
