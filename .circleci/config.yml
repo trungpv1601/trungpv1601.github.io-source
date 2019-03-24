@@ -25,9 +25,7 @@ jobs:
 
       - run: sudo npm install hexo-cli -g
 
-      - run:
-        command: |
-          git config --global user.email "trungpv1601@gmail.com"
-          git config --global user.name "Circle CI"
+      - run: git config --global user.email "trungpv1601@gmail.com"
+      - run: git config --global user.name "Circle CI"
 
       - run: hexo deploy --generate
