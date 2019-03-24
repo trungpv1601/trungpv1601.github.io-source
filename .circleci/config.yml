@@ -27,7 +27,4 @@ jobs:
 
       - run: git config --global user.email "trungpv1601@gmail.com"
       - run: git config --global user.name "Circle CI"
-      - run: sed -i'' "s~https://github.com/trungpv1601/trungpv1601.github.io.git~https://${GH_TOKEN}:x-oauth-basic@github.com/trungpv1601/trungpv1601.github.io.git~" _config.yml
-      - run: rm -rf .deploy_git/
-      - run: hexo clean
       - run: hexo deploy --generate
