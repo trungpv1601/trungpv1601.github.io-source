@@ -23,6 +23,6 @@ jobs:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
 
-      - run: npm install hexo-cli -g
+      - run: sudo npm install hexo-cli -g
 
       - run: hexo deploy --generate
