@@ -1,4 +1,7 @@
 # How to create new post
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/1d2a4211-e97d-4e2b-9324-8dd1988a3db9/deploy-status)](https://app.netlify.com/sites/trungpv/deploys)
+
 ### This source use [https://hexo.io](https://hexo.io) blog framework
 
 1. Create new post
