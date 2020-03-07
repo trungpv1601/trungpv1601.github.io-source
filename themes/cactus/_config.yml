@@ -19,7 +19,6 @@ nav:
   projects: https://github.com/trungpv1601
   about: /about/
 
-
 # Links to your social media accounts.
 # The keys should correspond to Fontawesome icon names
 # (see https://fontawesome.com/icons?d=gallery&s=brands);
@@ -42,7 +41,6 @@ tags_overview: false
 posts_overview:
   show_all_posts: false
   post_count: 5
-
 
 ##############################################################################
 # Look and Feel
@@ -76,7 +74,7 @@ favicon:
     url: /images/favicon.ico
     gravatar: false
   android:
-    url: /images/favicon-192x192.png
+    url: /images/android-chrome-144x144.png
     gravatar: false
   apple:
     url: /images/apple-touch-icon.png
@@ -94,7 +92,6 @@ colorscheme: white
 # Maximal width of the page in rem units.
 page_width: 48
 
-
 ##############################################################################
 # Miscellaneous
 ##############################################################################
@@ -108,7 +105,6 @@ open_graph:
   fb_admins:
   twitter_id:
   google_plus:
-
 
 ##############################################################################
 # Plugins
