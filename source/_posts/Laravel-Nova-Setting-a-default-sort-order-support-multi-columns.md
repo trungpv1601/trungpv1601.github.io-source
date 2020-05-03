@@ -7,22 +7,27 @@ tags:
   - TIL
 ---
 
-# Laravel Nova: Setup a default sort order for resource which support multi columns
-
-- Put the code bellow into Laravel Nova resource class
-
-- We are override `indexQuery` method of Resource parrent class.
+## 1. Trait
 
 ```
+<?php
+
+namespace App\Traits;
+
+use Laravel\Nova\Http\Requests\NovaRequest;
+
+trait NovaDefaultSort
+{
   /**
-   * Default Sort Columns variable
-   *
-   * @var array
+   * Default Sort Columns
+   * @return array
    */
-  public static $defaultSort = [
-      'id' => 'asc',
-      'name' => 'desc'
-  ];
+  public static function getDefaultSort()
+  {
+    return [
+      'id' => 'asc'
+    ];
+  }
 
   /**
    * Build an "index" query for the given resource.
@@ -33,12 +38,36 @@ tags:
    */
   public static function indexQuery(NovaRequest $request, $query)
   {
-      if (static::$defaultSort && empty($request->get('orderBy'))) {
-          $query->getQuery()->orders = [];
-          foreach (static::$defaultSort as $field => $order) {
-              $query->orderBy($field, $order);
-          }
+    if (static::getDefaultSort() && empty($request->get('orderBy'))) {
+      $query->getQuery()->orders = [];
+      foreach (static::getDefaultSort() as $field => $order) {
+        $query->orderBy($field, $order);
       }
-      return $query;
+    }
+    return $query;
+  }
+}
+
+```
+
+## 2. Usage
+
+- Put the code bellow into Laravel Nova resource class
+
+- We are override `getDefaultSort` method of Resource parrent class.
+
+```
+  use NovaDefaultSort;
+
+  /**
+   * Default Sort Columns
+   * @return array
+   */
+  public static function getDefaultSort()
+  {
+    return [
+      'id' => 'asc',
+      'name' => 'desc'
+    ];
   }
 ```
